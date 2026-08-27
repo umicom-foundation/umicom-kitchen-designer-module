@@ -1,0 +1,39 @@
+schema: umicom.application.v1
+
+application:
+  id: org.umicom.kitchen-designer
+  name: Umicom Kitchen Designer
+  short_name: Kitchen Designer
+  version: 0.1.0
+  executable: umicom-kitchen-designer-console
+  aliases: [kitchen]
+
+framework:
+  minimum_version: 0.9.0
+  compatible_major: 0
+
+frontends:
+  - console
+
+entry:
+  kind: workbench
+  taskbar_group: design
+  pinned_by_default: false
+  default_layout: design
+
+capabilities:
+  - umicom.designer
+  - umicom.cad
+  - umicom.data
+  - umicom.application.experience
+  - umicom.application.federation
+
+source_layout:
+  product_root: src
+  composition_root: src
+  console_frontend: src/console
+
+boundaries:
+  owns_reusable_framework_logic: false
+  owns_persistence: false
+  consumes_framework_services: true
