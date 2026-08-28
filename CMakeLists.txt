@@ -72,6 +72,12 @@ target_link_libraries(umicom_kitchen_designer_module PUBLIC
 umicom_apply_warnings(umicom_kitchen_designer_module)
 umicom_apply_sanitizers(umicom_kitchen_designer_module)
 
+include(
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../framework/cmake/UmicomThinApplicationRuntime.cmake")
+umicom_extend_thin_application_runtime(
+    NAME "kitchen"
+    TARGET "umicom_kitchen_designer_module")
+
 if(UMICOM_KITCHEN_DESIGNER_BUILD_CONSOLE)
     add_executable(umicom-kitchen-designer-console
         src/console/main.c)
