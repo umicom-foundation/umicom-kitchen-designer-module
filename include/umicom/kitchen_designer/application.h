@@ -25,11 +25,23 @@ extern "C" {
 
 #define UMI_KITCHEN_DESIGNER_MODULE_API_VERSION 1U
 
+/**
+ * Provide the kitchen designer application id operation used by this module and its client
+ * applications.
+ */
 const char *umi_kitchen_designer_application_id(void);
 
+/**
+ * Provide the kitchen designer application experience operation used by this module and
+ * its client applications.
+ */
 const UmiApplicationExperienceDefinition *
 umi_kitchen_designer_application_experience(void);
 
+/**
+ * Provide the kitchen designer application status operation used by this module and its
+ * client applications.
+ */
 UmiStatus umi_kitchen_designer_application_status(
     UmiApplicationExperienceStatus *out_status);
 

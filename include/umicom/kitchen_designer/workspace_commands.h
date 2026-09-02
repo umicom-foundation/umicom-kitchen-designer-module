@@ -23,16 +23,32 @@
 extern "C" {
 #endif
 
+/**
+ * Provide the kitchen designer workspace select layout operation used by this module and
+ * its client applications.
+ */
 UmiStatus umi_kitchen_designer_workspace_select_layout(
     UmiApplicationWorkspaceRuntime *runtime,
     const char *layout_id);
+/**
+ * Provide the kitchen designer workspace activate panel operation used by this module and
+ * its client applications.
+ */
 UmiStatus umi_kitchen_designer_workspace_activate_panel(
     UmiApplicationWorkspaceRuntime *runtime,
     const char *panel_id);
+/**
+ * Provide the kitchen designer workspace set context operation used by this module and its
+ * client applications.
+ */
 UmiStatus umi_kitchen_designer_workspace_set_context(
     UmiApplicationWorkspaceRuntime *runtime,
     const char *group_id,
     const char *value);
+/**
+ * Provide the kitchen designer workspace commands operation used by this module and its
+ * client applications.
+ */
 const UmiApplicationCommandSurface *umi_kitchen_designer_workspace_commands(
     const UmiApplicationWorkspaceRuntime *runtime);
 
