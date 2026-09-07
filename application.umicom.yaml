@@ -6,6 +6,8 @@ application:
   short_name: Kitchen Designer
   version: 0.1.0
   executable: umicom-kitchen-designer-console
+  native_executable: umicom-kitchen-designer
+  console_executable: umicom-kitchen-designer-console
   aliases: [kitchen]
 
 framework:
@@ -14,6 +16,8 @@ framework:
 
 frontends:
   - console
+  # Shared Framework GTK layout preview; domain services require controllers.
+  - gtk
 
 entry:
   kind: workbench
